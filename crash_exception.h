@@ -60,8 +60,8 @@ int GenerateMiniDump(PEXCEPTION_POINTERS pExceptionPointers)
     TCHAR szFileName[MAX_PATH] = { 0 };
     SYSTEMTIME stLocalTime;
     GetLocalTime(&stLocalTime);
-    MVPublic::newDir(App::appPath+"/BusinessCrash");
-    swprintf(szFileName, L"BusinessCrash/crash_%04d%02d%02d-%02d%02d%02d.dmp",
+    MVPublic::newDir(App::appPath+"/ForwardCrash");
+    swprintf(szFileName, L"ForwardCrash/crash_%04d%02d%02d-%02d%02d%02d.dmp",
         stLocalTime.wYear, stLocalTime.wMonth, stLocalTime.wDay,
         stLocalTime.wHour, stLocalTime.wMinute, stLocalTime.wSecond);
     HANDLE hDumpFile = CreateFile(szFileName, GENERIC_READ | GENERIC_WRITE,

@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     App::appName = MVPublic::appName();
     App::appPath = MVPublic::appPath();
     App::configFile = QString("%1/%2.ini").arg(App::appPath).arg(App::appName);
-    App::readConfig();
+    //App::readConfig();
     if (App::isOutPutDebuginfo) {
         void MessageOutPut(QtMsgType type, const QMessageLogContext &context, const QString &msg);
         qInstallMessageHandler(MessageOutPut);
