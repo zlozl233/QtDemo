@@ -1,5 +1,7 @@
 QT += core network concurrent
 QT += core gui
+QT += sql
+QT += websockets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -57,13 +59,17 @@ RC_FILE += version.rc
 CONFIG              +=qt thread
 
 SOURCES += \
+    WebSocketServerManager.cpp \
     main.cpp \
     ForwardMain.cpp \
+    mvdbconnpool.cpp \
     zlnetwork.cpp
 
 HEADERS += \
     ForwardMain.h \
+    WebSocketServerManager.h \
     crash_exception.h \
+    mvdbconnpool.h \
     zlnetwork.h
 
 FORMS += \
